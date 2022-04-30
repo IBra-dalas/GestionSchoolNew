@@ -191,7 +191,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="InscriptionsController.cs" />
+    <Compile Include="Controllers\InscriptionsController.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Absence.cs" />
     <Compile Include="Models\AnneeScolaire.cs" />

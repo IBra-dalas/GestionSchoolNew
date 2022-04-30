@@ -15,17 +15,20 @@ namespace GestionSchoolNew.Models
         //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{yyyy-mm-dd}")]
         //[DatabaseGenerated(DatabaseGeneratedOption.Computed)]
 
-        //[Display(Name = "Date Inscription")]
-        //public string DateInscription { get; set; }
+        [Display(Name = "Date Inscription")]
+        public string Datestring { get; set; }
+        /*[Display(Name = "Date Inscription")]
+        public string DateInscription { get; set; }
 
 
-        //public Inscription()
-        //{
-        //    DateInscription = DateTime.Now;
-        //}
+        public Inscription()
+        {
+            DateInscription =null;
+        }*/
         public virtual Tranche _Tranche { get; set; }
         public virtual Eleve _Eleve { get; set; }
         public virtual Classe _Classe { get; set; }
+       
         public virtual AnneeScolaire _AnneeScolaire { get; set; }
         [Display(Name = "Payer en ")]
         //   [ForeignKey("_ModePayement")]

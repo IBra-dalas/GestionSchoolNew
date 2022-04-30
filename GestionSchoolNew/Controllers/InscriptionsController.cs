@@ -8,6 +8,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using GestionSchoolNew.Models;
+using System.Data.SqlTypes;
 
 namespace GestionSchoolNew
 {
@@ -83,6 +84,23 @@ namespace GestionSchoolNew
         {
             if (ModelState.IsValid)
             {
+
+                var value = DateTime.Now;
+                    
+                       
+                            var date = (DateTime)value;
+                           /* if (date < SqlDateTime.MinValue.Value)
+                            {*/
+                              inscription.Datestring = date.ToString();
+                          /*  }*/
+                            /*else if (date > SqlDateTime.MaxValue.Value)
+                            {
+                                 inscription.DateInscription = SqlDateTime.MaxValue.Value;
+                            }
+                       */
+                    
+                
+               // inscription.DateInscription = DateTime.Now.Date;
                 db.Inscriptions.Add(inscription);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
