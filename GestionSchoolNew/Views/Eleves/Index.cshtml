@@ -1,0 +1,94 @@
+﻿@model IEnumerable<GestionSchoolNew.Models.Eleve>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomEleve)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrenomEleve)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SexeEleve)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateNaissance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LieuNaissance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomParent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrenomParent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfessionParent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactParent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailParent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdresseParent)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomEleve)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrenomEleve)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SexeEleve)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateNaissance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LieuNaissance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomParent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrenomParent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfessionParent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactParent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailParent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdresseParent)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdEleve }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdEleve }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdEleve })
+        </td>
+    </tr>
+}
+
+</table>

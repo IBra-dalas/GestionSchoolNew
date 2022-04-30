@@ -1,0 +1,27 @@
+﻿@model GestionSchoolNew.Models.Jour
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Jour</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LibelleJour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LibelleJour)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdJour }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

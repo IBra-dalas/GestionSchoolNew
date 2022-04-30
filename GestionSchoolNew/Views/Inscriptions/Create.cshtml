@@ -1,0 +1,98 @@
+﻿@model GestionSchoolNew.Models.Inscription
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Inscription</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.EtatEleve, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.EtatEleve)
+                    @Html.ValidationMessageFor(model => model.EtatEleve, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+            <div>
+        @Html.LabelFor(model => model._Eleve.NomEleve, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="list-group">
+                @Html.DropDownListFor(model => model._Eleve.NomEleve, (SelectList)ViewBag.ListEleve, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model._Eleve.NomEleve, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model._AnneeScolaire.LibelleAnneeScolaire, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="list-group">
+                @Html.DropDownListFor(model => model._AnneeScolaire.LibelleAnneeScolaire, (SelectList)ViewBag.ListAnneeSclaire, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model._AnneeScolaire.LibelleAnneeScolaire, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model._Classe.LibelleClasse, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="list-group">
+                @Html.DropDownListFor(model => model._Classe.LibelleClasse, (SelectList)ViewBag.ListClasse, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model._Classe.LibelleClasse, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model._Tranche.LibelleTranche, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="list-group">
+                @Html.DropDownListFor(model => model._Tranche.LibelleTranche, (SelectList)ViewBag.DropDownValue, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model._Tranche.LibelleTranche, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model._ModePayement.LibelleModePayement, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="list-group">
+                @Html.DropDownListFor(model => model._ModePayement.LibelleModePayement, (SelectList)ViewBag.DropMaValeur, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model._ModePayement.LibelleModePayement, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+    </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

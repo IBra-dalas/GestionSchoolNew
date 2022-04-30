@@ -1,0 +1,35 @@
+﻿@model GestionSchoolNew.Models.Heure
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Heure</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HeureDebut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeureDebut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeureFin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeureFin)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdHeure }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

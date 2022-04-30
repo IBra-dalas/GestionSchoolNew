@@ -1,0 +1,43 @@
+﻿@model GestionSchoolNew.Models.Professeur
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Professeur</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomProf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomProf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrenomProf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrenomProf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusProf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusProf)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdProf }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

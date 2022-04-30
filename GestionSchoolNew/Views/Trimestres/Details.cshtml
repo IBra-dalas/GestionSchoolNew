@@ -1,0 +1,43 @@
+﻿@model GestionSchoolNew.Models.Trimestre
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Trimestre</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LibelleTrimestre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LibelleTrimestre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DebutTrimestre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DebutTrimestre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinTrimestre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinTrimestre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdTrimestre }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

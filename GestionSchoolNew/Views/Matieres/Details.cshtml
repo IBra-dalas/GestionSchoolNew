@@ -1,0 +1,27 @@
+﻿@model GestionSchoolNew.Models.Matiere
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Matiere</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LibelleMatiere)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LibelleMatiere)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdMatiere }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
